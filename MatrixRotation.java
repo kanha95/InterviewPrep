@@ -29,10 +29,19 @@ import java.util.*;
                         
                         int temp=ar[x][y];
                         
+                        /*anticlockwise
                         ar[x][y]=ar[y][n-1-x];
                         ar[y][n-1-x]=ar[n-1-x][n-1-y];
                         ar[n-1-x][n-1-y]=ar[n-1-y][x];
                         ar[n-1-y][x]=temp;
+                        */
+                        
+                        
+                        //clockwise
+                         ar[x][y]=ar[n-1-y][x];
+                         ar[n-1-y][x]=ar[n-1-x][n-1-y];
+                         ar[n-1-x][n-1-y]=ar[y][n-1-x];
+                         ar[y][n-1-x]=temp;
                         
                     }
                 }
